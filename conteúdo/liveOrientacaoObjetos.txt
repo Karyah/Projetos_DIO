@@ -1,0 +1,57 @@
+Live de Orientação a Objetos.
+
+pensamento computacional etc:
+
+abstração - pegar só o que é importante pro problema etc.
+decomposição - dividir o problema em partes.
+reconhecimento de padrões.
+criação de algorítmos. 
+
+orientação a objetos:
+
+aproximação do mundo real com o virtual, atraves da criação e interação entre classes, atributos, métodos, objetos, etc
+pra q: organizar o projeto, padronizá-lo a partir de regras, aumento de reutilização de código, melhor interação entre fases do projeto, 
+aumento da segurança dos sistemas.
+
+portanto: redução do custo de manutenção, trabalho em equipe mais produtivo/simples.
+
+pilares da POO:
+
+0- Princípio da Abstração:
+O aluno tem idade, altura, cor de cabelo, etc. Várias características. Mas no contexto de matrícula na escola, por exemplo, não precisa-se saber
+a cor do cabelo do aluno. Pegar sempre os dados necessários para o contexto necessário. O que não é necessário a gente "abstrai". Filtração 
+de dados pro domínio. Para o domínio escola, alguns dados serão necessários, que talvez não sejam importantes para outros domínios.
+
+1- Encapsulamento
+Esconder a implementação dos objetos. Importante para a manutenção e a evolução do sistema. 
+
+2- Herança
+Permite que objetos sejam referenciados entre pais e filhos. De maneira que os filhos possam herdar todas as cacterísticas do pai(classe mãe). 
+Enquanto a classe-mãe não herda da classe filha.
+
+3- Composição
+A composição busca representar as relaçoes que os objetos devem ter.
+
+No domínio escola, tem funcionarios e alunos. Ambos precisam de endereço. 
+endereço 
+tudo que tem e precisa no endereço
+e colocar na classe aluno e funcionario.
+
+(Domínio - é o "problema")
+
+4- Polimorfismo
+domínio: funcionários.
+funcionario pj e funcionar clt
+
+quero que funcionarios e clt tenham método de calcular salario.
+
+Interface: calcula salario.
+
+func pj e clt terao formas diferentes de calcular o salario.
+duas classes diferentes terão o msm método.
+
+Classe: Molde. O padrão.
+a partir da classe, criam-se objetos.
+um molde é feito para criar vários objetos.
+A classe é a planta da casa, e o objeto a casa em si, com suas próprias características. é feita para definir as características do objeto.
+O objeto é salvo.

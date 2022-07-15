@@ -1,0 +1,216 @@
+INTRODUÇÃO AO GIT
+não tem interface gráfica, tudo é por linha de comando
+
+pode se situar no s.o.
+
+wind
+dir: lista de diretórios.
+linux $ ls
+
+cd [change directory] - base do diretório C:\
+
+cd NomeDaPasta - entra na pasta Windows.
+
+cd .. - voltar a pasta
+
+cls - limpar a tela WINDOWS / clear ou (ctlr l) LINUX
+
+(tab) - completar automaticamente.
+
+mkdir [make directory] - fazer diretório
+
+echo hello - devolve oq digitou
+
+echo hello >  hello.txt
+
+(>) é um redirecionador de fluxo
+
+del nomeDaPasta - deletar o(s) arquivo(s) 
+
+rmdir nomeDoRepositorio - deletar o repositório
+
+no linux:
+
+rm -rf workspace - deletar o repositoorio eu acho
+
+ENTENDENDO COMO O GIT FUNCIONA 
+
+SHA: Secure Hash lgorithm - é um conjunto de funções Hash criptográficas projetadas pela NSA
+	a encriptação gera conjunto de caracteres de 40 dígitos, e serve como identificação
+cada mudança no arquivo gera uma nova encriptação.
+
+forma curta de representar o estado de um arquivo. sempre gera uma chave diferente.
+
+sha1 - uma forma curta de representar o arquivo / o estado do arquivo
+
+echo "ola mundo" | openssl sha1 - quero usar o sha 1
+ele devolve o código.
+
+objetos do git:
+
+--blobs:
+o git armazena metadados nesses objetos.
+os arquivos ficam guardados dentro do objeto blob.
+guarda o sha1 do arquivo apenas.
+\0
+Ola Mundo
+
+
+--trees
+armazenam blobs.
+\0
+a arvore tbm guarda o nome do arquivo, e monta onde estão localizados
+os arquivos(blobs). a tree aponta para um arquivo(objeto) blob.
+a arvore tem seu sha1.
+
+se mudar uma virgula em um blob, o sha1 do blob muda, e o sha1 da tree também. 
+mesmo que seja em apenas um blob da tree. 
+
+um diretório pode conter outro diretório.
+
+
+--commits
+objeto que junta tudo
+aponta pra uma arvore, um parente (ultimos commits antes dele), autor e mensagem.
+pode colocar um significado para a mudança que foi feita. e mostra quem editou.
+também leva ao horário que foi criado.
+também possuem um sha1.
+
+se mudar a blob muda o sha1 do blob, muda a tree, consequentemente mudando o sha1 da 
+arvore, que pode alterar outras arvores, que também muda o commit e seu sha1.
+
+consequencia/vantagem: saber exatamente se o commit foi alterado.
+se o codigo é hosteado em nuvem (exemplo git hub), mostra a versão mais recente. 
+é o mesmo código para todos os mainteiners, pq as versoes disponíveis e seu código ainda
+estão com as pessoas. mesmo que todos os servidores caiam etc.
+
+CHAVES SSH E TOKENS
+
+quando vai mandar algo p github, era o nome e senha.
+o tipo de autenticação é mudado. 
+Chave SSH - forma de estabelecer uma conexão segura e estável entre duas máquinas
+no caso do github: a maquina local deve ficar confiavel
+
+duas chaves, uma publica e uma privada
+
+a publica fica no github, assim o github identifica a assinatura da maquina. 
+
+maquina fica configurada, e n precisa de login p upar arquivos.
+
+como gerar uma chave ssh
+
+ssh -keygen -t ed25519 -C (meu email)
+
+colocar senha.
+
+geramo a chave.
+
+cd /c/users/mastr/.ssh/
+
+cat id_ed25519.pub (chave publica)
+-ele vai retornar a chave publica, e é essa q a gente bota no github
+
+no github
+botar a chave em ssh key, key. e nome que a gente vai dar p essa chave.
+
+codigo(colocar a chave pa nóis)
+eval $(ssh-agent -s)
+ssh-add id_ed25519 (chave privada)
+
+pegar repositorio de alguem la
+git clone ai o link do ssh
+
+ls- ver repositórios
+
+TOKEN DE ACESSO PESSOAL:
+
+gerar token no github, guardar na maquina
+
+github pede usuario e senha e colocar o token.
+
+no github: developer settings
+personal acess tokens
+generate new tokens
+marcar repo 
+colocar nome pro token
+generate token
+vai ter o numero, copiar e salvar no arquivo no pc. só pode ver esse token
+uma vez.
+
+usar https ou copiar o link da pag
+ir pro terminal do bash
+git clone url...
+
+colocar token
+
+PRIMEIROS COMANDOS
+
+git init - criar repositorio dentro do diretório (pasta)
+guarda essa versão no servidor.
+
+qund faz um commit, ele integra ao repositorio local.
+:area de staging para o repositorio local
+
+
+tracked- 
+git tem ciencia que existe.
+pode ser unmodified,
+modified,
+staged(onde ficam os arquivos que estam se preparando pra fazer parte
+de outro tipo de agrupamento),
+
+untracked- 
+git n sabe que existe
+
+git add - mover arquivos no repositorio
+git commit - criar primeiro commit
+
+ls -a - mostra arquivos ocultos
+
+typora
+markdown - uma maneira mais humana de fazer um html, sem
+entender como ele funciona etc.
+#(h1)
+##(h2)
+###(h3)
+####(h4) etc...
+
+.md - markdown
+
+#Strogonoff de frango
+##
+
+git add * ou git add . 
+git commit -m "commit inicial" - dar nome ao commit 
+mostra o sha1
+untracked -> staged
+
+git compara sha1 dos arquivos e ve que altera unmodified -> modified
+
+quando os arquivos vem em stage, se preparam pra ir pro commit.
+commit retorna todos os arquivos para unmodified.
+
+git status - diz o estado.
+
+mv strogonoff.md ./receitas/ - mover pa essa pasta
+
+git add strogonoff.md receitas/ - add o arquivo ai no git
+
+dps do add
+
+commit -m "nome da alteração"
+
+echo > readme.md
+
+
+git remote add origin (url do github)
+
+(origin é o nome q a gnt deu a essa url)
+git remote -v
+
+git push origin master
+
+---
+
+git pull origin master
+

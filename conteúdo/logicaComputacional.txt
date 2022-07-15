@@ -1,0 +1,217 @@
+PENSAMENTO COMPUTACIONAL
+
+decompor: transformar um problema maior em vários menores.
+
+	síntese: combinar o problema original de forma que faça sentido. tranformar cada pequena peça de problema de forma que elas se reúnam em harmonia.
+Fundí-los de maneira coerente, chegando então na conclusão.
+	ordem sequencial - dependencia entre tarefas, feito em ordem. pra resolver o b, precisa do a.
+	"   " paralela - tarefas podem ser feitas ao mesmo tempo, sem dependencia ou necessidade de ordem.
+
+coletar dados. -> agregar dados -> funcionalidade (resultado, resolução)
+
+cozinhar:
+-identificar ingredientes.
+-determinar etapas.
+-executar etapas.
+-finalizar.
+
+
+identificar padrão:
+-existem coisas que sempre serão iguais, e algumas que podem mudar.
+generalizar para resolver problemas diferentes. que utilizam a mesma regra, por exemplo.
+
+abstração:
+Isolmento de um objeto da realidade para um mundo abstrato. De modo que esse se torne generalizado.
+Busca reunir numa classe geral, um conjunto de seres ou fenômenos similares.
+é aqui que ela basicamente explica o que é uma classe-mãe.
+
+algoritmos:
+o computador n opera sozinho, ele precisa de uma info prévia.
+receber, armazenar e processar dados.
+
+"step by step" passo a passo das instruções que foram dadas. devem ser entendidas por um ser humano e uma máquina.
+
+-compreensao do problema
+-definição de dados de entrada
+-definição do processamento
+-definição dos dados de saída
+*utilizar método de contrução
+*teste e diagnóstico
+
+fluxograma: símbolos predefinidos para fazer a logica.
+portugol: próximo a uma codificação, mas ainda não uma liguagem de programação de fato;
+
+INTRODUÇÃO A LOGICA DE PROGRAMAÇÃO
+
+lógica: "organização  e planejamento das instruções, assertivas em um algoritmo, a fim de viabilizar a implantação de um programa.
+
+Tecnica linear:
+
+Modelo tradicional
+Estrutura hierarquica
+Usada em progracão de computadores, muito associada em matemática.
+Execução sequenciada de uma série de operações.
+Uma única dimensão.
+
+Tecnica estruturada:
+
+Escrita do problema.
+Entendimento.
+Validação.
+Manutenção.
+
+Mais complexidade. 
+
+Técnica modular:
+
+Definir partes independentes, controladas por um conjunto de regras.
+Modelos de desencolvimento e resoluçao.
+
+Dados de entrada - processamento - Dados de saída.
+
+Permite:
+
+Simplificação
+Decomposição do problema
+Verficação de módulos específicos. Não precisa ver tudo, mas sim a parte que esteja em pauta na hora.
+
+FUNDAMENTOS DE ALGORÍTMOS
+
+---tipologia e variáveis:
+
+Informações: Dados e Instruções. 
+numéricos, caractéres e lógicos.
+
+Numéricos: Inteiros(1, -1), Reais(1, -1, 1.1,-1.1).
+
+Caracteres: #*?"!
+
+Lógico: 
+boolean(falso, verdadeiro).
+
+Variável:
+Tipo de estrutura mutável e inconstante. Pode receber mais de um valor, pode ser sobrescrita.
+Pode assumir qualquer um dos valores de um determinado conjunto de valores.
+Identifica determinado dado e seu respectivo tipo.
+
+boas práticas: 
+-descritivo
+-primeiro sempre é letra
+-pode receber  caracteres, numeros
+-sem utilização de espaços em branco.
+
+variável de ação(modifica estado do algoritmo) ou controle (controle de estrturas ex.: repetição)
+
+instruções são operações.
+
+---instruções primitivas:
+prioridades:
+
++ unário	 	1
+- unário 		1
+exponenciacao 	2
+/ binário 		3
+
+instruções sao linguafem de palavras-chave de uma determinada programação
+que tem por finalidade comandar um computador no tratamento dos dados.
+
+entrada, processamento e saída de dados.
+
+---estruturas condicionais e operadores
+
+condição: dado condição x seja verdade, realize operação x. caso contratio, y;
+caso falsa, exceção.
+
+op relacionais: igual a, diferente de, maior que etc.
+op logicos: and, or, not
+not: operador de negação.
+se condição for verdadeira, resultado falso.
+se condição for falsa, resultado verdadeiro.
+
+not b : tudo q n for b
+
+---Estruturas de repetição
+	alguma parte do código deve ser repetida com diversos diferentes valores
+laços, loops, controle de fluxo 
+	condição de parada - a partir de um numero de repetições predefinidas ou a partir de alguma
+condição
+
+vantagem: redução de linhas, compreensão facilitada, redução de erros. compreensão prejudicada por causa
+de informações demais. 
+
+---Vetores e Matrizes
+
+vetores: sequencia de tipos de dados
+- um vetor é caracterizado por uma variavel dimensionada com tamanho pré-fixado.
+pode ser visto como uma matriz unidimensional.
+
+matriz:
+tabela organizada em linhas e colunas no formato m x n, onde m representa o número de linhas, e 
+n o número de colunas. 
+
+coleção de variáveis(vetor) contidas na memória. tamanho prefixado, unidimensional.
+
+---Função(subalgoritmo, bloco, método, subprograma)
+
+vem da ideia matemática.
+a partir de um valor que ela recebe, retorna outro valor
+as funções são blocos que instruções que realizam tarefas/objetivos específicos.
+blocos de instruções(códigos), identificados por nomes e parâmetros. -> assinatura da função. 
+
+DEFINIÇÃO, NOME, INVOCAÇÃO E TIPO DE VARIÁVEL. 
+
+vem da ideia de decompor e reaproveitamento de código. modularização do problema. 
+Código fica mais claro, limpo, e existe grande reutilização de código.
+
+a mesma operação é realizada em diferentes lugares e contextos do código, mas ao criar uma função
+para uma dessas, a mesma pode ser reutilizada nos outros pontos necessarios do programa.
+
+---instruções de entrada e saída
+interfaces na qual os dados são inseridos e imprimidos. 
+sai do mundo abstrato computacional para o mundo real. os mesmos são imprimos na tela, banco de dados etc.
+
+saída programada(condicional, aguarda o dispositivo para realizar algo) ou
+saída por interrupção (interrupção por periféricos.)
+
+LINGUAGENS DE PROGRAMAÇÃO
+
+primeiro hardware, dps software. 
+
+fornece sintaxe, semantica, onde um conjunto de palavras é selecionado para definir um dado, uma regra. 
+
+processo de tradução:
+
+programa fonte (linguagem de alto nível) -> compilador -> programa objetp (linguagem de baico nível.)[linguagem da máquina ex.:Assembly]
+processo mais rápido 
+java, c++
+
+
+processo de interpretação:
+
+programa fonte executado diretamente
+maior flexibilidade, porém mais lenta
+js, python, ruby
+
+
+transpilação 
+
+linguagem de alto nivel -> linguagem de alto nivel mais baixo.
+interpretador 
+
+
+PARADIGMAS
+
+Estruturado:
+instruções sendo executadas em sequencia.
+aprendizado de programação, codigos simples e diretos, não compreendido por muitos.
+
+Orientação a objetos:
+análogo ao mundo real, utilização de objetos e suas interações.
+o que tenho?
+o que sou capaz de fazer?
+como faço?
+
+
+
+
+
