@@ -11,7 +11,7 @@ visibilidade, modificador, tipo nome = valor inicial
 
 são case sensitive.
 
-
+-----------------------------------------------------
 Tipos de Dados:
 São valores e consequentemente operações que as variáveis podem assumir e 
 sofrer, respectivamente.
@@ -62,3 +62,17 @@ String: null
 Boolean: false
 
 boas práticas: usar de forma adequada etc.
+
+--------------------------------------------------
+Operadores aritméticos:
+
+São símbolos especiais, os quais são capazes de realizar ações
+específicas em um, dois ou mais operandos e, em seguida, retornar 
+um resultado. 
+
+pós-fixado: exp++ ou exp--
+primeiro usa a expressão e dps efetua o calculo 
+
+prefixado: ++exp ou --exp
+aritmético: +,-,*,/ e %
+atribuição: =, +=, -=, *=, /= e %=
