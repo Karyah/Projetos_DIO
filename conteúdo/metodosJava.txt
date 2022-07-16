@@ -1,0 +1,36 @@
+É uma porção de código (sub-rotina) que é disponibilizada por uma classe. Este é executado
+quando é feita uma requisição a ele. São responsáveis por definir e realizar um determinado
+comportamento.
+
+exemplo de tudo que pode ter:
+(visibilidade)	 (tipo)  	(modificador)    (tipo)   (nome)  (parâmetro)  (corpo)
+public		 abstract   	static      void 	   Nome	(int a)	{}
+
+exceções entre parâmetros e corpo. opcionais.
+
+método:
+
+public double calcularTotalVenda(double precoItem){}
+
+assinatura:
+
+calcularTotalVenda(double precoItem)
+
+Construtor e Destrutor: metodos especiais na poo
+
+Mensagem: é o ato de solicitar ao método que o mesmo execute.
+Esta pode ser direcionada a um objeto ou a uma classe.
+
+parâmetros:
+-por valor(cópia):
+
+int i = 10;
+
+public void fazerAlgo(int i){
+	i = i + 10;
+	Syso("valor de dentro:"+ i);
+}
+Syso("valor de fora:" + i);
+
+-por referencia(endereço)
+
