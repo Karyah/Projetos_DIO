@@ -34,3 +34,23 @@ Syso("valor de fora:" + i);
 
 -por referencia(endereço)
 
+Sobrecargas:
+capacidade de definir metodos para diferentes contexto mas preservando seu nome
+
+usa da assinatura. 
+podemos usar metodos com mesmo nome, mas com diferentes assinaturas.
+considera-se a sequencia, então mesmo que tenham os mesmo parametros, se a sequencia 
+muda, cria-se uma sobrecarga válida.
+
+Retornos:
+
+realiza um return quando:
+-completa todas suas instruções internas.
+-chega a uma declaração explicita de retorno.
+-lança uma exceção.
+
+-definido em sua criação e poded ser um tipo primitivo ou objeto.
+-o tipo de dado do return deve ser compatível com o do método.
+-se o método for void, pode ou não ter um return para sua execução..
+MAS ESSE RETURN N PODE DEVOLVER VALOR, TEM QUE SER SÓ RETURN;
+
