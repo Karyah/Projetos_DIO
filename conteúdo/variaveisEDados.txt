@@ -1,0 +1,64 @@
+Variáveis:
+um espaço na memoria do computador, onde se pode guardar valores.
+
+instância: objeto
+classe: classe
+local : dentro de métodos
+parâmetro: na assinatura do método
+
+padrão pra criar uma variável:
+visibilidade, modificador, tipo nome = valor inicial
+
+são case sensitive.
+
+
+Tipos de Dados:
+São valores e consequentemente operações que as variáveis podem assumir e 
+sofrer, respectivamente.
+
+Tipificação:
+	estática(forte) vs dinâmica(fraco)
+
+estático: vai ser sempre esse tipo de variavel.
+dinâmico: n é obrigado a definir o tipo de variavel.
+
+	primitivo vs composto
+
+primitivos: dados mais básicos, atômicos e homogêneos. valores numéricos e textuais.
+(Atômicos significam que os valores não podem se repetir e nem atributos com mais de um valor.)
+compostos: ligado a poo.
+
+Opções de tipos de dados:
+
+-textual
+
+exemplos:
+
+char(16 bit unicode) - muito complexo e trabalhoso. 
+String(classe, n é primitivo) - utilizamos muito esse. 
+
+-numeral
+
+exemplos:
+(de menor capacidade de armazenamento a maior)
+byte
+short
+int 
+long
+float
+double
+
+-lógico(v ou f)
+
+exemplos:
+boolean (true ou false)
+
+-objeto(ligados a poo)
+
+Valores iniciais(definidos caso não tenham sido inicializados): 
+Tipos numericos:0, 0L, 0.0f, 0.0d
+Char: '\u0000'
+String: null
+Boolean: false
+
+boas práticas: usar de forma adequada etc.
