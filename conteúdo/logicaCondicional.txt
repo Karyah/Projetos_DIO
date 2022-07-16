@@ -1,0 +1,175 @@
+Operadores relacionais:
+
+São símbolos especiais os quais são capazes de realizar comparações entre determinados 
+operandos e em seguida retornar um resultado.
+
+
+
+tipos:
+	Similaridade: igual, diferente.
+
+	Sempre existirão dois operandos.
+		igualdade: ==
+		diferença: !=
+
+	Tamanho: maior, maior igual, menor, menor igual
+		maior: >
+		maior igual: >=
+		menor:<
+		menor igual:<=
+
+Operadores Lógicos:
+ 
+São símbolos especiais os quais são capazes de realizar comparações
+lógicas entre operando lógicos ou expressões e, em seguida, retornar
+um resultado.
+
+Tipos:
+
+-Conjunção: operação lógica que só é verdadeira quando ambos os operandos ou 
+expressões envolvidos são verdadeiros.
+Simbologia: &&
+Terminologia: and
+
+
+-Disjunção: operação que só é falsa quando ambos os operandos
+ou expressões envolvidos são falsos
+Simbologia: ||
+Terminologia: or
+
+-disjunção exclusiva: operação que só é verdade quando ambos os operandos
+ou expressões são opostos
+Simbologia: ^
+Terminologia: xor
+
+a = V
+b = V
+R: F
+
+a = V
+b = F
+R: V
+
+a = F
+b = F
+R: F
+
+a = F
+b = V
+R: V
+
+-negação: operação que inverte o valor lógico de um operando ou uma expressão
+Simbologia: !
+Terminologia: inversão
+
+Operadores bitwise: & e |
+bits de numeros inteiros. NÃO SÃO OPERADORES LÓGICOS
+Operadores shift: ~, >>,>>>,<<
+mexe com bits.
+
+boolean b1 = true;
+boolean b2 = false;
+boolean b3 = true;
+boolean b4 = false;
+
+b1&&b2 = false;
+b1&&b3 = true;
+b2||b3 = true;
+b2||b4 =  false;
+b1^b3 = false;
+b4^b1 = true;
+!b1 = false;
+!b2 = true;
+
+expressões:
+
+(i1>i2)||(f2<f1)
+((i1+i2)<(f2-f1))&&true
+
+
+Controle de fluxo:
+São estruturas que tem a capacidade de direcionar o fluxo de execução 
+do código.
+
+Tipos: 
+Decisão: if, if-else, if-else-if, switch e operador ternário.
+
+Estrutura que avalia uma condição booleana ou variável para direcionar 
+o fluxo de execução.
+
+Opções: if(se), switch(escolha) e operador ternário. 
+
+IF:
+se true -> fim1
+se false -> fim2 ou nada.
+
+if(..){}
+
+if(...){}else{}
+
+if(...){}else if(...){}else{} -> precisa de mais de uma decisão. 
+
+Operador ternário:
+("isso é estranho e não é legal" - deve ser evitado ao máximo.)
+se true -> exp1
+
+se false -> exp2
+
+condição ? true : false;
+
+condição ? true : null;
+
+ligado ? desligar : ligar;
+
+emMovimento ? freia : null; 
+(esta em movimento? sim. então freia)
+(esta em movimento? não. então null)
+
+
+Repetição: for, while, do while. 
+Interrupção: break, continue e return.
+
+Switch:
+
+código -> variável
+
+switch(valor 1){
+
+case 1:
+... 
+break;
+
+case 2:
+...
+break;
+
+default(se n der certo os cases):
+...
+break;
+}
+
+variaveis: char, byte, shor, int, Enum e String
+
+Boas Práticas: 
+
+switch é usado para valores exatos e if para expressões booleanas.
+evitar usar o default do switch para casos genéricos.
+evitar o efeito "flecha" dos if's
+quando tem muitos ifs dentro dos outros, fica muito grande. é bom criar
+mais variáveis que resumam o que você quer dizer etc.
+(verificar se o caso que será utilizado realmente se aplica.)
+evitar muitos if's aninhados
+
+
+Blocos: 
+é um grupo de 0 ou mais código os quais trabalham em conjunto
+para executar uma operação
+
+Tipos:
+-locais: dentro de métodos
+-estáticos: dentro de classes
+-instâncias: dentro de classes
+
+aparentemente n precisa abrir e fechar chaves pra colocar só uma linha de
+execução
+
