@@ -1,0 +1,63 @@
+Estrutura de Repetição:
+
+-pode repetir uma operação ou uma série de repetições diversas vezes.
+-cada repetição é chamada de laço(loop). um dos conceitos mais básicos da programação
+estruturada.
+-uma estrutura de repetição permite que uma sequência de comandos seja 
+executada repetidamente CASO DETERMINADAS CONDIÇÕES SEJAM SATISFEITAS.
+-essas condições são representadas por expressões lógicas. 
+
+	-repetição com teste no início(while):
+
+	-repetição com teste no final(do-while):
+
+	-repetição contada(for):
+
+-o "break" é utilizado para terminar de forma abrupta uma repetição. 
+-quando o comando "continue" é executado, os comandos restantes da repetiçao são ignorados 
+e o programa volta a testar novamente ou não. SÓ É USADO EM LAÇO DE REPETIÇÃO.
+
+Operadores de incremento e decremento
+
+pré-fixados(QUER RETORNAR VALOR MODIFICADO):
+
+++numero -> numero = numero +1 -> retorne numero
+--numero -> numero = numero - 1 -> retorne numero
+
+
+pós fixados(QUER RETORNAR VALOR ORIGINAL.):
+
+numero++ -> retorne numero -> numero = numero + 1
+numero-- -> retorne numero -> numero = numero -1
+
+Array:
+É um objeto utilizado para armazenar sequencialmente dados do mesmo tipo. 
+Estrutura para armazenar dados.
+tem variaveis. dentro dela tem varios dados. 
+
+uma sala de aula, quero guardar o nome de todos os alunos
+
+aluno 1=karen
+aluno 2=maria etc...
+
+varias variaveis pra armazenar alunos
+
+o conceito de array a gente junta tudo em uma variável.
+na sequencia q vc add é como será organizado. 
+TODOS OS DADOS ARMAZENADOS TEM QUE SER DO MESMO TIPO. 
+Permanece para sempre do mesmo tamanho depois de criado. 
+
+Array unidimensional ou multidimensional. 
+
+uni: c[0]...c[11]
+
+multi:
+	  coluna 0	  coluna 1	  coluna 2
+linha 0 a[0][0]	  a[0][1]      a[0][2]
+linha 1 a[1][0]	  a[1][1]	   a[1][2]	
+
+a: nome do array
+primeiro[]: índice de linha
+segundo[]: índice de coluna
+
+o numero dentro do [] guarda a posição do array. 
