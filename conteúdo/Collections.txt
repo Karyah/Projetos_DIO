@@ -1,0 +1,60 @@
+Métodos em List:
+
+indexOf(): exibir posição dentro da lista. passar o objeto e vai retornar um int. o int é a posição.
+add(elemento): adicionar valores.
+toString()
+add(posição, elemento)
+set(): recebe posição que eu quero substituir e o elemento desejado.
+(coloquei o index caso eu n saiba a posição dele)
+notas.set(notas.indexOf(5d), 6.0);
+contains(): pra saber se tem o valor/objeto que queremos. 
+retorna um boolean. se tem o 5 é true, se n tem o elemento 5 retorna false.
+
+para exibir as notas da List notas:
+
+for(Double nota : notas) Syso(nota);
+
+get(): exibir nota específica(colocar posição recebe o elemento)
+
+Collections.min(notas); - metodo da classe collections que mostra a menor nota.
+Collections.max(notas); - método da classe collections que mostra a maior nota.
+
+soma dos valores:
+n existe um método
+da pra iterar e ir somando.
+
+Iterator<Double> itegator = notas.iterator();
+Double soma = 0d;
+
+while(iterator.hasNext()){
+	Double next = iterator.next();
+	soma+= next;
+}
+
+quantidade de elementos da List: size();
+retorna o inteiro, que significa a quantidade que tem na List. 
+
+remove(): remover um elemento. pode decidir entre a posição(int) ou o elemento. 
+
+remova as notas menores que 7 e exibir a lista:
+
+Iterator<Double> interator2 = notas.iterator();
+
+while(interator.hasNext()){
+	Double next = iterator2.next();
+	if(next < 7) iterator2.remove();	
+}
+
+clear(): apagar toda a lista
+
+notas.clear;
+
+Syso(notas)
+
+>>>[]
+
+OU 
+
+.isEmpty() - Booleano. Retorna true se for vazia, false se não. 
+Collections.sort(meusGatos) - tem q ter comparable
+
