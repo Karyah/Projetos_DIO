@@ -12,3 +12,86 @@ focado no que fazer
 -melhor acoplamento
 -diminuição do gap semântico
 -coletor de lixo
+
+A orientação a Objetos é um pardigma de análise, projeto e programaão 
+de sistemas de software baseado na composição e interação entre diverasa
+unidades de software chamadas de objetos.
+
+Classe:
+É uma estrutura que abstrai um conjunto de objetos com características similares.
+Uma classe define o comportamento de seus objetos através de métodos e os estados
+possíveis destes objetos através de atributos. Em outros termos, uma classe descev
+
+A classe é o molde, pelo qual modelaremos o mundo real, de maneira que ela possa criar
+o mundo real. ABSTRAÇÃO. 
+São entidades do mundo real. 
+
+Atributo:
+É o elemento de uma classe responsável por definir sua estrutura de dados. O conjunto destes
+será responsável por representar suas características e fará parte dos objetos criados a partir
+da classe. Caracterização de objetos.
+
+Atributo x Variável
+
+atributo - o que é próprio e peculiar a alguém ou a alguma coisa.
+variável - sujeito a variações ou mudanças; que pode variar; inconstante, instável.
+
+variável dentro de método.
+atributo dentro de classe. 
+
+entender a finalidade dop atributo ajudará. 
+
+Método: porção de código que é disponibilizada pela classe. Este é executado quando é feita 
+uma requisição a ele. Um método serve para identificar serviços, ações que a classe oferece.
+São responsáveis por definir e realizar um determinado comportamento.
+
+
+Construtor: cria objetos. 
+
+public Carro(){...}
+
+é criado de forma implicita pela propria linguagem 
+
+Destrutor: auxilia a destrução do objeto 
+
+class Carro(){
+	void finalize(){}
+}
+
+Objeto:
+
+um objeto é a representação de um conceito/entidade do mundo ral, que pode ser física 
+ou conceitual, e possui um significado definido para um determinado software. Para
+esse conceito/entidade, deve ser definida inicialmente uma classe a partir da qual
+posteriormente serão instânciados objetos distintos. 
+
+Mensagem:
+É o processo de ativação de um método de um objeto. Isto ocorre quando uma 
+requisição (chamada) a esse método é realizada, assim disparando a execição de
+seu comportamento descrito por sua classe. Pode também ser direcionada diretamente
+à classe caso a requisição seja a um método estático.
+
+carro.métoto();
+
+Conceitos relacionais
+
+Herança: É o relacionamento entre classes em que uma classe chamada subclasse(classe
+filha, classe derivada) é uma extensão, um subtipo de outra classe chamada superclasse(classe
+pai, classe mãe, classe base). Devido a isto, a subclasse consegue reaproveitar os atributos
+e métodos dela. Além dos que venham a ser herdados, a subclasse pode definir seus próprios 
+membros.
+
+Upcast e Downcast.
+
+	    func
+
+gerente, vendedor, faxineiro
+
+upcast - subir em sua hierarquia. transformando gerente em func. A a = new B();
+
+B é subclasse de A
+
+downcast - descendo em hierarquia. transformando func em gerente exemplo.
+
+Polimorfismo: a mesma ação, se comportando diferente
+

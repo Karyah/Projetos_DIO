@@ -82,3 +82,42 @@ linkedHashSet usa implementação LinkedHashSet
 mantém ordem de insersão dos elementos
 fica no meio em relação de performance
 permite apenas um elemento nulo
+
+-----------------------------------------------------------------------------------------
+
+Map: java.util.Map
+
+Caracterísiticas da interface Map
+Elementos únicos (key) para cada valor (value)
+
+Map é objeto onde podemos colocar múltiplos elementos, como objetos 
+ou variáveis primitivas. 
+
+cada elemento do map tem uma chave e um valor.
+as chaves desse elemento tem que ter valores únicos. 
+
+NÃO PODE CHAVES REPETIDAS. 
+
+valores podem se repetir
+
+Implementação Hashtable: mais antiga
+
+TreeMap: muito utilizado para ordenação. 
+Big O notation: log n
+Ordem natural das keys
+Não é sincronizado. 
+
+Hashmap: implementa a interface Map
+Big O notation: 1
+Iteration order: Random
+Não é sincronizado.
+
+LinkedHashMap: extends da Hashmap
+Big O notation: 1
+De acordo com a inserção
+Não é sincronizado.
+
+O HashMap e o LinkedHashMap tem a msm perfomance
+
+treemap demora mais
+
