@@ -58,3 +58,27 @@ OU
 .isEmpty() - Booleano. Retorna true se for vazia, false se não. 
 Collections.sort(meusGatos) - tem q ter comparable
 
+
+*-------------------------------------------------------------------------------*
+
+Set
+java.util.Set
+não permite elementos  duplicados.
+não possui índice
+nem get indexOf n tem, n da p passar elemento
+
+treeSet é uma implementação. importante pra ordenação. Usa implementação
+TreeMap.
+mantém ordem natural dos elementos. se for numeros, vai ser ordem numérica,
+String vai ser numérica.
+nãp permite elementos nulos.
+
+hashSet usa implemetção HashMap
+não mantém a ordem dos caractéres. tudo fica alatório.
+tem uma performance melhor que linked e tree  -Set
+permite apenas um elemento nulo
+
+linkedHashSet usa implementação LinkedHashSet
+mantém ordem de insersão dos elementos
+fica no meio em relação de performance
+permite apenas um elemento nulo

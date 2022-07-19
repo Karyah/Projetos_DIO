@@ -1,0 +1,14 @@
+paradigma estruturado x poo
+
+pe: representação mais simplista - alguns conceitos mais limitados. 
+não representa o mundo real
+foca em operações(funções) e dados. focado no como fazer
+
+poo: representação mais realista dos conceitos do mundo real.
+mais focado na modelagem de entidades e nas interações destas.
+focado no que fazer
+
+-melhor coesão
+-melhor acoplamento
+-diminuição do gap semântico
+-coletor de lixo
