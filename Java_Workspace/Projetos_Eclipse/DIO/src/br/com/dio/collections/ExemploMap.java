@@ -2,7 +2,9 @@ package br.com.dio.collections;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class ExemploMap {
@@ -57,9 +59,25 @@ public class ExemploMap {
 			
 		}
 			
+		Double consumoMenosEficiente = Collections.min(carrosPopulares.values());
+		String modeloMenosEficiente = "";
 		
+		for(Map.Entry<String, Double>entry2: carrosPopulares.entrySet()){
+			if(entry2.getValue().equals(consumoMenosEficiente)) {
+				modeloMenosEficiente = entry2.getKey();
+				System.out.println("Modelo menos eficiente:"+modeloMenosEficiente);
 				
-		System.out.println("Retorne ");
+			}
+		}
+		
+		Iterator<Double> iterator = carrosPopulares.values().iterator();
+		Double soma =0d;
+		
+		while(iterator.hasNext()) {
+			soma += iterator.next();
+		}
+				
+		
 		
 		
 	}
