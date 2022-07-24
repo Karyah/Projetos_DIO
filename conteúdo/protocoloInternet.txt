@@ -1,0 +1,296 @@
+Principais protocolos de comunicação da internet
+
+Protocolo HTTP:
+	determina como os lados se comunicam (cliente
+e servidor)
+	cliente http usa o browser
+	servidor hosteia objetos
+
+clientes enviam messagens de requeste 
+servidor responde com protocolo TCP
+
+arquitetura client-server
+	cliente se preocupa com o que quer
+	servidor só se preocupa em responder
+
+-stateless: servidor n possui estado do cliente
+
+se cliente pedir mais de uma vez, responde mais de uma
+vez
+
+cliente:
+metodo get que chama o recurso e tudo que o servidor 
+precisa pra executar a ação.
+solicita algo pro servidor.
+browser manda solicitação.
+
+o servidor envia se ele conseguiu ou não, e envia os 
+metadados dos recursos que foram pedidos.
+servidor procura no banco de dados, repositório
+
+POST:
+submissão de conteúdo pro servidor
+requisição não é pra ver algo, e sim enviar algo,
+como um formulário, fazer cadastro.
+
+servidor responde se consegue dar update 
+
+XML, JSON:
+armazenar, transmitir e reconstruir os dados de envio
+para recebimento.
+acontece a partir de um desses modelos padronizados.
+
+content-type: json
+ou xml etc.
+
+serialization: processo de tranformação de dados, 
+armazenando, transferindo e mandando os dados
+
+
+xml: metadados.
+usa tags
+<username>dados
+permite que metadados sejam mandados
+
+
+json é baseado em sintaxe de js
+mais legível, mais simples
+permite utilização de vetores
+bate o olho e entende
+chave -> valor
+indepentende de outras linguagens de programação
+
+
+XML E JSN
+são auto-descritivos: facil de entender.
+ordem hierárquica
+vasta utilização
+
+qual formato utilizar?
+
+depende da tecnologia utilizada
+
+aplicaçõesleves: json
+complexidade: xml(aceita metadados)
+
+particularidades do http 1.1:
+
+não persistente 
+------------------------------------------------
+Head Of Line Blocking:
+envia request e espera resposta
+bloqueia qualquer outra execução até
+obter uma resposta.
+
+browser permite q o cliente consiga fazer até
+6 execuções simultaneas
+se precisar de mais fica na fila de espera
+------------------------------------------------
+problemas:
+HOL
+repetição de dados
+inunda a rede e envia pacotes maiores do que preci-
+saria
+-------
+persistente: mantém comunicação ativa
+não persistente: assim que recebe a resposta
+pro que foi pedido, fecha a comunicação;
+
+HTTP request:
+texto em ASCII
+request line: método get
+método http versão
+
+header line: url, tipo de conexão, quem realiza 
+a conexão(broser), language.
+
+get usado em 90% dos casos. buscar páginas.
+accept: tipo de info que aceita receber
+fatores de qualidade.
+
+métodos seguros: get, head, option
+não modificam o servidor ->safe methos
+são read-only.
+
+HTTP response:
+Status line, Header lines, entity body.
+
+300 ok, 301 moved permanently, 400 bad request,
+404 not found, 500 http version ...
+
+info responde (100-199)
+sucessful response(200-299)
+redirection response(300-399)
+client error response(400-499)
+server error response(500-599)
+
+webdav 
+permite add, deletar, retrieve.
+copy and move.
+
+header lines: data, dados da mensagem, servidor.
+
+Cookies e Cash
+
+http é stateless e client/server
+n guarda info dos clientes
+
+se precisarmos identificar o cliente:
+	cookies. 
+track info
+cookies são pedaços ou blocos de dados criados uti-
+lizados pelo servidor para persistir dados no 
+dispositivo do cliente.
+persistir esses dados.
+ficam dentro do header file.
+
+request http -> acesso ao back-end(se existe) -> responde
+add ao histórico.
+cookies de sessão: a partir do momento em que a sessão
+encerra, eles são apagados.
+
+cookies persistentes: mantidos por meses/anos
+quando mantém login ativo.
+carrinho de e-commerce
+informação de website
+
+Cookies e privacidade:
+dentro do seu pc tem mts arquivos sobre vc, perfil de 
+navegação
+cookies são um pouco invasivos, veem o perfil
+eles tão seguros? se vc sofrer um malware, ele pode
+usar os cookies. 
+------------------------------------------------
+CACHING:
+
+ao inves de pedir direto pro servidor, ele checha 
+se já tem as informações no proxy, NO SERVIDOR
+INTERMEDIÁRIO.
+
+pediu p ir p amazon: cache vê se já ta salva 
+essa info. se já tá envia a info, sem ter que ir 
+pro servidor.
+se não achou, ou se a info tá muito antiga, entra em 
+contato com o server, atualiza a info e dps manda pro pc.
+
+redução do tempo de resposta
+redução do tráfego
+overhead não ultrapassa muito.
+------------------------------------------------
+
+HTTP 2.0:
+atualizações do protocolo
+
+o que trouxe de melhorias:
+-conexão PERSISTENTE. 
+-faer conexão estável, e depois ir fazendo várias requisições
+e receber as respostas em ordem diferente.
+-streams distintos: comunicações eficientes.
+-pode segmentar e compactar
+-https padrão: TLS
+-negociação no handshake: eu tenho a versão 2.0 pra
+usar, vc quer? ai se ele quer aplica-se.
+
+CONTRAS:
+
+-e o push foi feito na config errada, vai causar
+grandes problemas.
+
+mix de 1.1 e 2.0:
+	lentidão
+	load balancer 1.1
+
+
+reutilização do header. se tem mais de uma requisição,
+mas todas requisições tem o mesmo header, pode reu
+tilizar aquele header para todos. não precisa re-
+escrever o header
+
+Push: envia tudo que ele precisa sem esperar a 
+requisição do cliente
+
+cliente pede parte da página, então vou mandar o 
+resto da página junto.
+não é habilitado por default.
+se o cliente n tem suporte ao push, da ruim.
+
+PRIORIZAÇÕES DE RECURSOS:
+a barra ser carregada antes de outra coisa
+
+criar pesos de prioridades.
+
+Servidores e Sistema de aplicação:
+	APACHE, XAMPP, NGINX
+
+apache: só utiliza o q precisa.
+comptibilade com ipv6
+suporte a versão 2.0 do http
+maioria wind
+
+
+xampp utiliza apache kk
+iterpretadores script php/perl
+maioria p linux e mac
+
+nginx: 2004
+load balancer, proxy reverso, http cache
+suporte a htttp 2.0
+
+Segurança da Informação
+
+Criptogradia por chave
+não quer que qulqr pessoa entenda aquele arquivo.
+
+conteúdo é criptografado, e somente com a chave 
+pode-se descriptografar para o original
+
+ASSIMÉTRICA:
+chave privada e chave pública.
+só quem tem a privada consegue acessar esses dados.
+
+SIMÉTRICA: 
+conchecimento prévio da chave.
+a letra que quer mais 3 por exemplo.
+só da pra saber se sabe qual esse padrão
+bits pseudo aleatórios
+
+Cifra de Bloco:
+a cada 3 bits eu permuto a partir de uma tabela de 
+permutação
+ se tenho 010, vai devolver sla 101
+
+
+Protocolo SSL
+secure socket layer
+
+confidencialidade
+integridade
+autenticidade
+
+WEB SOCKET
+em http, muitas requisições 
+
+conexões subjacentes
+alto overhead 
+
+solução: fazer uma unica conexão bidimensional
+exemplos: twitter, trelo, jogos onlines
+muitas informações atualizadas constantementes.
+
+websocket roda encapsulado no http
+é um upgrade
+cria-se uma api, e o protocolo utiliza toda infraestrutura
+existe do http
+
+adequação do protocolo
+
+s[o aceita json
+
+DEFINIÇÃO:
+o protocolo fornece comunicação cliente/servidor executando
+um código não confiável em um ambiente controlado para o host que
+escohlheu essa comunicação.
+
+
+
+
